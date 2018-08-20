@@ -15,7 +15,7 @@ public class AboutConditionals {
         if (true) {
             x++;
         }
-        assertEquals(x, __);
+        assertEquals(x, 2);
     }
 
     @Koan
@@ -27,7 +27,7 @@ public class AboutConditionals {
         } else {
             x--;
         }
-        assertEquals(x, __);
+        assertEquals(x, 0);
     }
 
     @Koan
@@ -42,7 +42,7 @@ public class AboutConditionals {
         } else {
             x--;
         }
-        assertEquals(x, __);
+        assertEquals(x, 10);
     }
 
     @Koan
@@ -61,7 +61,7 @@ public class AboutConditionals {
             x--;
         }
         // Where does this else belong to!?
-        assertEquals(x, __);
+        assertEquals(x, 10);
     }
 
     @Koan
@@ -78,7 +78,7 @@ public class AboutConditionals {
             default:
                 result += "Nothing";
         }
-        assertEquals(result, __);
+        assertEquals(result, "Basic One");
     }
 
     @Koan
@@ -93,7 +93,7 @@ public class AboutConditionals {
             default:
                 result += "Nothing";
         }
-        assertEquals(result, __);
+        assertEquals(result, "Basic OneTwoNothing");
     }
 
     @Koan
@@ -108,11 +108,12 @@ public class AboutConditionals {
             case 2:
                 result += "Two";
         }
-        assertEquals(result, __);
+        assertEquals(result, "Basic NothingTwo");
     }
 
     @Koan
     public void switchStatementConstants() {
+      //TODO understand final modifier
         int i = 5;
         // What happens if you remove the 'final' modifier?
         // What does this mean for case values?
@@ -125,11 +126,12 @@ public class AboutConditionals {
             default:
                 result += "Nothing";
         }
-        assertEquals(result, __);
+        assertEquals(result, "Basic Nothing");
     }
 
     @Koan
     public void switchStatementSwitchValues() {
+      //TODO understand this
         // Try different (primitive) types for 'c'
         // Which types do compile?
         // Does boxing work?
@@ -142,16 +144,16 @@ public class AboutConditionals {
             default:
                 result += "Nothing";
         }
-        assertEquals(result, __);
+        assertEquals(result, "Basic One");
     }
 
     @Koan
     public void shortCircuit() {
-        int i = 1;
+        int i = 1; //TODO why use variable here, good q
         int a = 6;
         // Why did we use a variable here?
         // What happens if you replace 'a' with '6' below?
         if ((a < 9) || (++i < 8)) i = i + 1;
-        assertEquals(i, __);
+        assertEquals(i, 2);
     }
 }
